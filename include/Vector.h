@@ -9,12 +9,16 @@ class Vector
 {
 public:
     Vector(double x, double y, double z);
+    Vector operator-() const;
 
 private:
     double x;
     double y;
     double z;
+
     friend ostream& operator<<(ostream& os, const Vector& v);
+    friend Vector operator*(const double s, const Vector& v);
+    friend Vector operator*(const Vector & v, const double s);
 };
 
 #endif
