@@ -26,5 +26,16 @@ int main()
     Vector v4 = v1 * 5;
     cout << v4 << endl;
 
+    Vector v5(2, -3, 5);
+    Vector v6(7, 11, -13);
+
+    cout << v5+v6 << endl;
+    cout << v5-v6 << endl;
+
+    Vector v7(1, 4, 8);
+    cout << v7.magnitude() << endl;
+
+    cout << v7.normalize() << endl;
+
     return 0;
 }

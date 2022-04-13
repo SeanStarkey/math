@@ -10,6 +10,8 @@ class Vector
 public:
     Vector(double x, double y, double z);
     Vector operator-() const;
+    double magnitude() const;
+    Vector normalize() const;
 
 private:
     double x;
@@ -18,7 +20,9 @@ private:
 
     friend ostream& operator<<(ostream& os, const Vector& v);
     friend Vector operator*(const double s, const Vector& v);
-    friend Vector operator*(const Vector & v, const double s);
+    friend Vector operator*(const Vector& v, const double s);
+    friend Vector operator+(const Vector& lhs, const Vector& rhs);
+    friend Vector operator-(const Vector& lhs, const Vector& rhs);
 };
 
 #endif
