@@ -6,6 +6,7 @@
 
 #include "Point.h"
 #include "Vector.h"
+#include "Matrix.h"
 
 using namespace std;
 
@@ -36,6 +37,19 @@ int main()
     cout << v7.magnitude() << endl;
 
     cout << v7.normalize() << endl;
+
+
+    Matrix m1("1 2\n3 4");
+    cout << m1.toString() << endl;
+
+    Matrix m2("3 4\n5 6");
+    cout << m2.toString() << endl;
+
+    Matrix m3 = m1 + m2;
+    cout << m3.toString() << endl;
+
+    Matrix m4 = m1 * m2;
+    cout << m4.toString() << endl;
 
     return 0;
 }
